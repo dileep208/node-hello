@@ -1,0 +1,8 @@
+#!/bin/sh     
+ssh ubuntu@172.31.91.125<<EOF
+ cd /var/www/html/
+ git pull origin master      
+ npm install --production      
+ pm2 restart all
+ exit      
+EOF
